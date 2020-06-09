@@ -1,0 +1,10 @@
+from selenium import webdriver # 크롬 자동 실행
+from selenium.webdriver.common.keys import Keys #너무 길어서, 불러옴
+
+driver = webdriver.Chrome()
+url  =  'https://google.com' # 구글로 이동
+driver.get(url)
+
+
+driver.find_element_by_css_selector('.gLFyf.gsfi').send_keys('파이썬')
+driver.find_element_by_css_selector('.gLFyf.gsfi').send_Keys(Keys.Enter)

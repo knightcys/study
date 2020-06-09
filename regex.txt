@@ -1,0 +1,20 @@
+import re
+
+test_str = '''Girl: I am girl.
+
+Boy:
+
+I am boy
+
+Dog: Bark
+
+Cat: 
+
+Meow'''
+
+regex = r':\s*\n+'
+subst = ": "
+
+for line in re.sub(regex, subst, test_str, 0, re.MULTILINE).split('\n'):
+       if line != '':
+           print (line.strip())

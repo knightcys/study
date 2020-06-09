@@ -1,0 +1,19 @@
+
+
+#
+with open("test.txt","r+") as f:
+    new_f = f.readlines()
+    f.seek(0)
+    for line in new_f:
+        if "번째" not in line:
+            f.write(line)
+    f.truncate()
+
+파일 내 해당단어 포함 행만 모두 삭제
+
+#
+file = open('print.txt', 'r+')
+file.truncate(0)
+file.close
+
+파일 내용 모두 삭제

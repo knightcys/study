@@ -1,0 +1,23 @@
+f = open('print.hwp', 'w')
+
+text = """< input >
+
+
+< output >
+
+
+< summary >
+
+
+"""
+
+for i in range(1, 999):
+    data = "< %d번째 >\n" % i
+
+    f.write(data)
+    f.write(text)
+
+    # text2 = text.replace("<", "-")
+    # f.write(text2)
+
+f.close()

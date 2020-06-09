@@ -1,0 +1,14 @@
+
+'''
+나누기
+'''
+
+with open('test.txt', 'r') as file :
+  filedata = file.read()
+
+# Replace the target string
+filedata = filedata.partition('< input >')[0]
+
+# Write the file out again
+with open('test1.txt', 'w') as file:
+  file.write(filedata)

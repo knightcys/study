@@ -1,0 +1,48 @@
+import requests
+
+# web_url에 원하는 웹의 URL을 넣어주시면 됩니다.
+r = requests.get('https://search.naver.com/search.naver?where=news&sm=tab_jum&query=일산병원')
+
+''''
+'UTF-8'
+'''
+r.status_code
+
+'''
+200
+''''
+
+r.headers['content-type']
+
+'''
+'text/html; charset=UTF-8'
+'''
+
+r.encoding
+
+'''
+'UTF-8'
+'''
+
+
+r.text
+
+
+
+----------
+from bs4 import BeautifulSoup
+import urllib
+
+if __name__  == "__main__":
+    soup = BeautifulSoup(urllib.request.urlopen('http://movie.naver.com/movie/sdb/rank/rmovie.nhn?sel=pnt&date=20161120').read(), 'html.parser')
+    res = soup.find_all('div', 'tit5')
+    print(res)
+
+for n in res:
+    print(n.get_text())
+
+'''
+영화이름만
+'''
+
+-------------

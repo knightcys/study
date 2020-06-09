@@ -1,0 +1,12 @@
+from datetime import date
+date.today()
+
+'''
+datetime.date(2020, 6, 9)
+'''
+
+date.today().isoformat()
+
+'''
+'2020-06-09'
+'''

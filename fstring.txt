@@ -1,0 +1,13 @@
+name = "tongchun"	# type 'str'
+age = 42			# type 'int'
+height = 176.5		# type 'float'
+married = True		# type 'bool'
+
+# f-string
+message = f"My name is {name}. Age is {age}. Height is {height}.He is married ({married})"
+print(message)
+
+My name is tongchun. Age is 42. Height is 176.5.He is married (True)
+
+-----------------
+
